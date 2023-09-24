@@ -74,7 +74,7 @@ const InputField = ({
 
   return (
     <>
-      <div className="flex flex-col w-[64%] pb-16">
+      <div className="flex flex-col w-[70%] pb-16">
         <span className="text-center p-2 font-semibold">
           Type below to convert to selected hash
         </span>

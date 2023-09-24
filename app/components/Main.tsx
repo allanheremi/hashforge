@@ -30,7 +30,7 @@ function Main({}: Props) {
           selectedHash={selectedHash}
           setSelectedHash={setSelectedHash}
         />
-        <div className='border border-black w-[64%] text-center h-fit rounded-md bg-purple-200'>
+        <div className='border border-black w-[70%] text-center h-fit rounded-md bg-purple-200'>
 <span className='text-[1rem] break-words overflow-auto '>Output: 
 <br/>
 <br/>
