@@ -1,10 +1,29 @@
+'use client';
 import React from 'react';
-import HashList from './HashList';
+const crypto = require('crypto-js');
 
 type Props = {
+  currentInput: any;
+  setCurrentInput: any;
+  currentOutput: any;
+  setCurrentOutput: any;
 };
 
-const InputField = (props: Props) => {
+const InputField = ({
+  currentInput,
+  setCurrentInput,
+  currentOutput,
+  setCurrentOutput,
+}: Props) => {
+  
+  const handleInputChange = (e: any) => {
+    const newValue = e.target.value;
+    setCurrentInput(newValue);
+
+    const hash = crypto.SHA256(newValue).toString();
+    setCurrentOutput(hash);
+  };
+
   return (
     <>
       <div className="flex flex-col w-[50%] p-4">
@@ -12,19 +31,16 @@ const InputField = (props: Props) => {
           type="text"
           className="border border-black"
           placeholder="Input"
+          onChange={handleInputChange}
+          value={currentInput}
         />
-
-        <label htmlFor="format">
-          <select name="Input type" id="format">
-            <option value="text">Text</option>
-            <option value="hex">Hex</option>
-          </select>
-        </label>
 
         <input
           type="text"
           className="border border-black"
           placeholder="Output"
+          value={currentOutput}
+          readOnly
         />
       </div>
     </>

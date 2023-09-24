@@ -24,6 +24,7 @@ const HashList = ({selectedHash, setSelectedHash}: Props) => {
 <li onClick={() => handleChange('SHA2')}>SHA2</li>
 <li onClick={() => handleChange('SHA3')}>SHA3</li>
 <li onClick={() => handleChange('SHA224')}>SHA224</li>
+<li onClick={() => handleChange('SHA256')}>SHA256</li>
 <li onClick={() => handleChange('SHA384')}>SHA384</li>
 <li onClick={() => handleChange('SHA512')}>SHA512</li>
 <li onClick={() => handleChange('Keccak256')}>Keccak256</li>
