@@ -18,15 +18,15 @@ const HashList = ({selectedHash, setSelectedHash}: Props) => {
   return (
     <>
     
-<ul className='flex flex-col px-4 gap-1 absolute'>
-<li className='text-l underline'>Hashing function</li>
-<li onClick={() => handleChange('SHA1')}>SHA1</li>
-<li onClick={() => handleChange('SHA3')}>SHA3</li>
-<li onClick={() => handleChange('SHA224')}>SHA224</li>
-<li onClick={() => handleChange('SHA256')}>SHA256</li>
-<li onClick={() => handleChange('SHA384')}>SHA384</li>
-<li onClick={() => handleChange('SHA512')}>SHA512</li>
-<li onClick={() => handleChange('Keccak256')}>Keccak256</li>
+<ul className='flex flex-col gap-y-1 absolute w-[8rem]'>
+<li className='underline font-bold'>Hash</li>
+<li onClick={() => handleChange('SHA1')} className='hover:border-l-2 border-purple-200 font-semibold '>SHA1</li>
+<li onClick={() => handleChange('SHA3')} className='hover:border-l-2 border-purple-200 font-semibold'>SHA3</li>
+<li onClick={() => handleChange('SHA224')} className='hover:border-l-2 border-purple-200 font-semibold'>SHA224</li>
+<li onClick={() => handleChange('SHA256')} className='hover:border-l-2 border-purple-200 font-semibold'>SHA256</li>
+<li onClick={() => handleChange('SHA384')} className='hover:border-l-2 border-purple-200 font-semibold'>SHA384</li>
+<li onClick={() => handleChange('SHA512')} className='hover:border-l-2 border-purple-200 font-semibold'>SHA512</li>
+<li onClick={() => handleChange('Keccak256')} className='hover:border-l-2 border-purple-200 font-semibold'>Keccak256</li>
 </ul>
     </>
   );

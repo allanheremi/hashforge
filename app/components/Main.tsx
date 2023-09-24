@@ -12,14 +12,14 @@ function Main({}: Props) {
 
   return (
     <>
-      <main className="">
-        <div className="w-[-30%] flex flex-row-reverse text-center">
+      <main className="h-screen p-8">
+        <div className="w-[-10%] flex flex-row-reverse text-center ">
           <HashList
             selectedHash={setSelectedHash}
             setSelectedHash={setSelectedHash}
           />
         </div>
-        <h1 className="px-4">Selected hash: {selectedHash}</h1>
+        <h1 className="px-4 font-bold underline">Selected hash: {selectedHash}</h1>
       
     
         <InputField
@@ -30,9 +30,14 @@ function Main({}: Props) {
           selectedHash={selectedHash}
           setSelectedHash={setSelectedHash}
         />
-      </main>
+        <div className='border border-black w-[64%] text-center h-fit rounded-md bg-purple-200'>
+<span className='text-[1rem] break-words overflow-auto '>Output: 
+<br/>
+<br/>
+ {currentOutput}</span>
 
-      <span className='px-4 text-[12px]'>Output: {currentOutput}</span>
+</div>
+      </main>
     </>
   );
 }
