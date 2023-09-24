@@ -19,7 +19,7 @@ const HashList = ({selectedHash, setSelectedHash}: Props) => {
     <>
     
 <ul className='flex flex-col px-4 gap-1 absolute'>
-<li className='text-xl underline'>Hash</li>
+<li className='text-l underline'>Hashing function</li>
 <li onClick={() => handleChange('SHA1')}>SHA1</li>
 <li onClick={() => handleChange('SHA3')}>SHA3</li>
 <li onClick={() => handleChange('SHA224')}>SHA224</li>

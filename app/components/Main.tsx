@@ -6,7 +6,7 @@ import HashList from './HashList';
 type Props = {};
 
 function Main({}: Props) {
-  const [selectedHash, setSelectedHash] = useState('');
+  const [selectedHash, setSelectedHash] = useState('SHA256');
   const [currentInput, setCurrentInput] = useState('');
   const [currentOutput, setCurrentOutput] = useState('');
 
@@ -20,8 +20,8 @@ function Main({}: Props) {
           />
         </div>
         <h1 className="px-4">Selected hash: {selectedHash}</h1>
-        <h1>Current input = {currentInput}</h1>
-        <h1 >Current output = {currentOutput}</h1>
+      
+    
         <InputField
           currentInput={currentInput}
           setCurrentInput={setCurrentInput}
@@ -31,6 +31,8 @@ function Main({}: Props) {
           setSelectedHash={setSelectedHash}
         />
       </main>
+
+      <span className='px-4 text-[12px]'>Output: {currentOutput}</span>
     </>
   );
 }

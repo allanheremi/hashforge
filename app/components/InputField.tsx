@@ -21,6 +21,7 @@ const InputField = ({
   selectedHash,
   setSelectedHash,
 }: Props) => {
+
   const handleInputChange = (e: any, selectedHash: any) => {
     console.log(selectedHash)
 
@@ -80,19 +81,19 @@ const InputField = ({
 
   return (
     <>
-      <div className="flex flex-col w-[50%] p-4">
+      <div className="flex flex-col w-[85%] p-4 sm:w-[164px]">
         <input
           type="text"
-          className="border border-black"
-          placeholder="Input"
+          className="border border-black h-[6rem] placeholder:text-center text-center"
+          placeholder="Type text to hash here"
           onChange={e => handleInputChange(e, selectedHash)}
           value={currentInput}
         />
-
+<span className='text-center py-4'>Type above to convert to selected hash</span>
         <input
           type="text"
-          className="border border-black"
-          placeholder="Output"
+          className="border border-black h-[6rem] placeholder:text-center text-[0.7rem] text-center sm:w-[50%]"
+          placeholder="Hash output"
           value={currentOutput}
           readOnly
         />
