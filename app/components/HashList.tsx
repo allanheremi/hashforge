@@ -3,10 +3,16 @@ import React, { useState } from 'react';
 const crypto = require('crypto-js')
 const Keccak256 = require('keccak256')
 
-type Props = {};
+type Props = {
+  selectedHash: any,
+  setSelectedHash: (string: string) => void
+};
 
-const HashList = (props: Props) => {
-const [selectedHash, setSelectedHash] = useState('')
+const HashList = ({selectedHash, setSelectedHash}: Props) => {
+ 
+  const handleChange = (e : string) => {
+    setSelectedHash(e)
+  }
 
 
   return (
@@ -14,13 +20,13 @@ const [selectedHash, setSelectedHash] = useState('')
     
 <ul className='flex flex-col px-4 gap-1 absolute'>
 <li className='text-xl underline'>Hash</li>
-<li onClick={() => setSelectedHash('SHA1')}>SHA1</li>
-<li onClick={() => setSelectedHash('SHA2')}>SHA2</li>
-<li onClick={() => setSelectedHash('SHA3')}>SHA3</li>
-<li onClick={() => setSelectedHash('SHA224')}>SHA224</li>
-<li onClick={() => setSelectedHash('SHA384')}>SHA384</li>
-<li onClick={() => setSelectedHash('SHA512')}>SHA512</li>
-<li onClick={() => setSelectedHash('Keccak256')}>Keccak256</li>
+<li onClick={() => handleChange('SHA1')}>SHA1</li>
+<li onClick={() => handleChange('SHA2')}>SHA2</li>
+<li onClick={() => handleChange('SHA3')}>SHA3</li>
+<li onClick={() => handleChange('SHA224')}>SHA224</li>
+<li onClick={() => handleChange('SHA384')}>SHA384</li>
+<li onClick={() => handleChange('SHA512')}>SHA512</li>
+<li onClick={() => handleChange('Keccak256')}>Keccak256</li>
 </ul>
     </>
   );
