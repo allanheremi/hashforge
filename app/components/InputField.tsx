@@ -16,10 +16,8 @@ type Props = {
 const InputField = ({
   currentInput,
   setCurrentInput,
-  currentOutput,
   setCurrentOutput,
   selectedHash,
-  setSelectedHash,
 }: Props) => {
   const handleInputChange = (e: any, selectedHash: any) => {
     console.log(selectedHash);
@@ -77,7 +75,7 @@ const InputField = ({
   return (
     <>
       <div className="flex flex-col w-[64%] pb-16">
-      <span className="text-center p-2 font-semibold">
+        <span className="text-center p-2 font-semibold">
           Type here to convert to selected hash
         </span>
         <input
@@ -86,7 +84,6 @@ const InputField = ({
           onChange={e => handleInputChange(e, selectedHash)}
           value={currentInput}
         />
-   
       </div>
     </>
   );
