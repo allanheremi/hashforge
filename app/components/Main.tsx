@@ -27,6 +27,8 @@ function Main({}: Props) {
           setCurrentInput={setCurrentInput}
           currentOutput={currentOutput}
           setCurrentOutput={setCurrentOutput}
+          selectedHash={selectedHash}
+          setSelectedHash={setSelectedHash}
         />
       </main>
     </>
